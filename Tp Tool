@@ -1,0 +1,25 @@
+local notifGui = Instance.new("ScreenGui")
+notifGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+local toolNotif = Instance.new("TextLabel")
+toolNotif.Text = "Modified by Rok"
+toolNotif.Size = UDim2.new(0, 100, 0, 30)
+toolNotif.Position = UDim2.new(0, 250, 0, -14)
+toolNotif.BackgroundTransparency = 0.5
+toolNotif.BackgroundColor3 = Color3.new(0, 0, 0)
+toolNotif.TextColor3 = Color3.new(1, 1, 1)
+toolNotif.Parent = notifGui
+toolNotif.Visible = true
+wait(3)
+toolNotif.Visible = false
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+local tool = game.Players.LocalPlayer.Backpack:FindFirstChild("Tp Tool 🗿") or Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = "Tp Tool 🗿"
+tool.Activated:Connect(function()
+    local pos = mouse.Hit + Vector3.new(0, 2.5, 0)
+    pos = CFrame.new(pos.X, pos.Y, pos.Z)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack
