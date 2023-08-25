@@ -10,9 +10,7 @@ local notifGui = Instance.new("ScreenGui")
  toolNotif.TextColor3 = Color3.new(1, 1, 1) 
  toolNotif.Parent = notifGui 
  toolNotif.Visible = true 
- wait(3) 
- toolNotif.Visible = false 
-  
+ 
  local mouse = game.Players.LocalPlayer:GetMouse() 
  local tool = game.Players.LocalPlayer.Backpack:FindFirstChild("Tp Tool 🗿") or Instance.new("Tool") 
  tool.RequiresHandle = false 
@@ -23,3 +21,6 @@ local notifGui = Instance.new("ScreenGui")
      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos 
  end) 
  tool.Parent = game.Players.LocalPlayer.Backpack
+
+wait(3) 
+ toolNotif.Visible = false 
